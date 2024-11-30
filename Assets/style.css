@@ -1,0 +1,106 @@
+/*Oficial font*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Globals*/
+* {
+margin:0;
+padding:0;
+box-sizing: border-box;
+font-family: 'Montserrat', 'sans-serif';
+}
+
+body {
+    background-color: #081b29;
+    color: #ededed;
+}
+
+/*Navbar set up*/
+.container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    font-size: 23px;
+    color: aqua;
+}
+
+/*body setup*/
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.homeContent {
+    max-width: 700px;
+}
+
+.homeContent h1 {
+    font-size: 56px;
+    font-weight: 300;
+    font-style:oblique;
+}
+
+.homeContent h3 {
+    font-size: 25px;
+    font-weight: 200;
+    color: aqua;
+}
+
+.homeContent p {
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.homeContent .btnBox {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+    
+}
+
+.btnBox a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background-color: transparent;
+    border: 2px solid aqua;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1;
+}
