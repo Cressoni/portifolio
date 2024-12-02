@@ -1,106 +1,126 @@
-/*Oficial font*/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/*Globals*/
-* {
-margin:0;
-padding:0;
-box-sizing: border-box;
-font-family: 'Montserrat', 'sans-serif';
+:root{
+/*_____Main Theme colors_____*/
+--first-color: #0e2431;
+--second-color: #6a59d1;
+--third-color: #777;
+
+/*_____hover colors_____*/
+--hover-color: #614fd0;
+
+/*_____background colors_____*/
+--body-bg-color: #fefefe;
+--card-bg-color: #fff;
+--modal-bg-color: #fff;
+--bg-transparent-color: rgba(0, 0, 0, 0.1);
+--bg-transparent-color-01: rgba(0, 0, 0, 0.1);
+--bg-transparent-color-02: rgba(106, 89, 209, 0.1);
+--line-color: #d7d7d7;
+
+/*_____Color Filter_____*/
+--color-filter: invert(1);
+
+/*_____Box shadow_____*/
+--box-shadow: 0px 0px 20px rgb(0 0 0 / 10%);
+
+/*_____Font Size_____*/
+--small-font-size: 0.9em;
+--normal-font-size: 1em;
+--big-font-size: 1.1rem;
+
+/*_____Scroll bar colors_____*/
+--scroll-bar-color: #c5cadf;
+--scroll-thumb-color: #70768a;
+--scroll-thumb-hover-color: #454f6b;
 }
 
-body {
-    background-color: #081b29;
-    color: #ededed;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:  border-box;
+    font-family: 'Poppins', sans-serif;    
 }
 
-/*Navbar set up*/
-.container{
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+    color: var(--first-color);
+    background-color: var(--body-bg-color);
+    margin: 2rem 0 0 0;
+    transition: .5s ease;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/*_____header_____*/
+header{
+    z-index: 99999;
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    padding: 20px;
-    background-color: transparent;
+    backdrop-filter: blur(20px);
+    transition: .6s ease;
+}
+
+.nav-bar{
+    position: relative;
+    height: calc(4rem + 1rem);
+    max-width: 1250px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+    transition: .6s ease;
 }
 
-.logo{
-    font-size: 25px;
-    color: #ededed;
-    text-decoration: none;
+.nav-bar .logo{
+    color: var(--first-color);
+    font-size: 1.3rem;
     font-weight: 600;
 }
 
-
-.navbar a {
-    font-size: 18px;
-    color: #ededed;
-    text-decoration: none;
+.nav-items a{
+    color: var(--first-color);
+    font-size: var(--normal-font-size);
     font-weight: 500;
-    margin-left: 35px;
-    transition: .3s;
 }
 
-.navbar a:hover,
-.navbar a.active {
-    font-size: 23px;
-    color: aqua;
+.nav-items a:not(:last-child){
+    margin-right: 50px;
 }
 
-/*body setup*/
-
-.home {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 0 5%;
+.nav-items a:hover{
+    color: var(--second-color);
+    font-size: var(--big-font-size);
 }
 
-.homeContent {
-    max-width: 700px;
+/*____Home Section____*/
+.home{
+    position: relative;
+    max-width: 1250px;
+    min-height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4rem 2rem;
+    flex-direction: column;
 }
 
-.homeContent h1 {
-    font-size: 56px;
-    font-weight: 300;
-    font-style:oblique;
-}
-
-.homeContent h3 {
-    font-size: 25px;
-    font-weight: 200;
-    color: aqua;
-}
-
-.homeContent p {
-    font-size: 16px;
-    font-weight: 100;
-}
-
-.homeContent .btnBox {
+.home .home-content{
     display: flex;
     justify-content: space-between;
-    width: 345px;
-    height: 50px;
-    
-}
-
-.btnBox a {
-    display: inline-flex;
-    justify-content: center;
     align-items: center;
-    width: 150px;
-    height: 100%;
-    background-color: transparent;
-    border: 2px solid aqua;
-    border-radius: 8px;
-    font-size: 19px;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 1;
+    width: 100%;
 }
