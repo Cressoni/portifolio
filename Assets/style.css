@@ -62,6 +62,26 @@ li {
     list-style: none;
 }
 
+
+/*_____scroll bar_____*/
+::-webkit-scrollbar{
+    width: 10px;
+    background: var(--scroll-bar-color);
+
+}
+::-webkit-scrollbar:hover{
+    width: 11px;
+    transition: 0.5s;
+}
+::-webkit-scrollbar-thumb{
+    background: var(--scroll-thumb-color);
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: var(--scroll-thumb-hover-color);
+}
+
 /*_____header_____*/
 header{
     z-index: 99999;
@@ -72,6 +92,13 @@ header{
     backdrop-filter: blur(20px);
     transition: .6s ease;
 }
+
+header.sticky {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: var(--box-shadow);
+}
+
+
 
 .nav-bar{
     position: relative;
@@ -84,6 +111,10 @@ header{
     margin-right: auto;
     padding: 0 20px;
     transition: .6s ease;
+}
+
+header.sticky .nav-bar {
+    height: calc(2.5rem + 1rem);
 }
 
 .nav-bar .logo{
@@ -216,6 +247,7 @@ header{
 
 
 /*_____Common styles for all sections_____*/
+
 .flex-center {
     display: flex;
     justify-content: center;
@@ -248,6 +280,86 @@ header{
     opacity: .1;
 }
 
+.section-title-02{
+    font-size: 2.5rem;
+    font-weight: 700;
+    transform: translateY(-80px);
+}
+
+.section-title-02:before{
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 5px;
+    right: 0;
+    bottom: 0;
+    background: var(--second-color);
+}
+
+.container {
+    position: relative;
+    flex-direction: column;
+}
+
+
 /*___About Section_____*/
 
-  
+ .about .container .content{
+    column-gap: 40px;
+    width: 100%;
+ }
+
+ .about-image img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    min-width: 500px;
+    border-radius: 10px;
+  }
+
+
+  .about-info .description {
+    max-width: 100%;
+  }
+
+  .about-info .description h3{
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .about-info .description h4{
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .about-info .description h4 span{
+    color: var(--second-color);
+  }
+
+  .about-info .description p {
+    color: var(--third-color);
+    font-size: var(--normal-font-size);
+    margin-bottom: 15px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid var(--line-color);
+  }
+
+
+  .about-info .professional-list{
+    display: flex;
+    column-gap: 30px;
+  }
+
+  .about-info .professional-list h3{
+    font-size: 2.5em;
+    font-weight: 700;
+
+}
+
+.about-info .professional-list .list-item span{
+    color: var(--third-color);
+    font-size: var(--small-font-size);
+}
